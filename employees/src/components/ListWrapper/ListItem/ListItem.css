@@ -1,0 +1,45 @@
+.listItem__wrapper {
+    list-style: none;
+    padding: 50px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.listItem__image {
+    flex-shrink: 0;
+    margin-right: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.listItem__name {
+    margin: 0 0 12px 0;
+    color: #1E58FF;
+    font-weight: 700;
+}
+
+.listItem__id {
+    margin: 6px 0;
+    font-weight: 300;
+}
+
+.listItem__age {
+    margin: 6px 0;
+    font-weight: 300;
+}
+
+.listItem__salary {
+    margin: 6px 0;
+    font-weight: 300;
+}
+
+
+/* .listItem__button {
+    padding: 7px 12px;
+    font-weight: 500;
+    background: none;
+    border: 2px solid #1E58FF;
+    color: #1E58FF;
+    cursor: pointer;
+} */
