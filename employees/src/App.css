@@ -1,5 +1,9 @@
 
-/* .App {
+
+.App {
+  display: flex;
+}
+  /* .App {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;

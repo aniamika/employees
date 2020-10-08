@@ -2,13 +2,11 @@ import React from 'react';
 import './ListItem.css';
 import person from '../../../assets/images/person.jpg';
 
-export default class ListItem extends React.Component {
-    constructor() {
-        super();
-        this.state = {
+class ListItem extends React.Component {
+
+    state = {
         employees: [],
-        };
-    }
+    };
 
     componentDidMount() {
         fetch('http://dummy.restapiexample.com/api/v1/employees')
@@ -17,8 +15,8 @@ export default class ListItem extends React.Component {
         }).then(data => {
         let employees = data.data.map((item) => {
         return(
-            <li key={item.data} className="listItem__wrapper">
-                <img src={item.profile_image || person} className="listItem__image"/>
+            <li key={item.id} className="listItem__wrapper">
+                <img src={item.profile_image || person} alt="{item.employee_name}" className="listItem__image"/>
                 <div>                
                     <h2 className="listItem__name">{item.employee_name}</h2>
                     <div className="listItem__id">id: {item.id}</div>
@@ -29,7 +27,7 @@ export default class ListItem extends React.Component {
         )
         })
         this.setState({employees: employees});
-        console.log("state", this.state.employees);
+        // console.log("state", this.state.employees);
     })
     }
 
@@ -39,3 +37,4 @@ export default class ListItem extends React.Component {
         );
     }
 }
+export default ListItem;

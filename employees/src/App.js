@@ -2,16 +2,23 @@ import React from 'react';
 import './App.css';
 import ListWrapper from './components/ListWrapper/ListWrapper';
 import './index.css';
-// import { employees } from './data/employees';
-// import FetchEmployee from './components/FetchEmployee/FetchEmployee';
+import Form from './components/Form/Form';
 
-function App() {
+class App extends React.Component {
 
-  return (
-    <div className="App">
-      <ListWrapper/>
-    </div>
-  );
+  addItem = (event) => {
+    event.preventDefault();
+    console.log(event.target.value);
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <ListWrapper />
+        <Form submitFn={this.addItem}/>
+      </div>
+    )
+  }
 }
 
 export default App;
